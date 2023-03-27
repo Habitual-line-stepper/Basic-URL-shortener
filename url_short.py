@@ -1,7 +1,6 @@
 import tkinter as tk
 import pyshorteners
 import pyperclip
-clipboard_url = []
 
 
 def shorten_url():
@@ -9,13 +8,15 @@ def shorten_url():
     short = pyshorteners.Shortener()
     short_url = short.tinyurl.short(long_url)
     shortened_label.config(text=short_url)
-
-    global clipboard_url
-    clipboard_url = short_url
+    return short_url
 
 
 def copy_to_clipboard():
+    clipboard_url = shorten_url()
     pyperclip.copy(clipboard_url)
+
+
+# Create tkinter widgets here and set callbacks as needed
 
 
 window = tk.Tk()

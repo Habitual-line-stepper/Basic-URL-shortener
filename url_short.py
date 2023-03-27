@@ -21,6 +21,7 @@ def copy_to_clipboard():
 
 window = tk.Tk()
 window.title("URL Shortener")
+window.geometry("450x100")
 
 url_label = tk.Label(window, text="Enter URL:")
 url_label.grid(column=0, row=0)

@@ -20,11 +20,12 @@ def copy_to_clipboard():
 
 window = tk.Tk()
 window.title("URL Shortener")
+window.geometry("450x100")
 
 url_label = tk.Label(window, text="Enter URL:")
 url_label.grid(column=0, row=0)
 
-url_entry = tk.Entry(window, width=30)
+url_entry = tk.Entry(window, width=50)
 url_entry.grid(column=1, row=0)
 
 shorten_button = tk.Button(window, text="Shorten", command=shorten_url)
